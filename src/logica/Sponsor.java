@@ -36,6 +36,7 @@ public class Sponsor {
 	        this.aptosponsor = aptosponsor;
 	    }
 	    
+	    
 	    @Override
 		public String toString() {
 			return "\n\nid_sponsor: " + id_sponsor + "\nequipo: " + equipo + "\napto sponsor: " + aptosponsor;

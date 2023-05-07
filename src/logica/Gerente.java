@@ -1,5 +1,7 @@
 package logica;
 
+import java.util.LinkedList;
+
 import javax.swing.JOptionPane;
 
 public class Gerente extends Usuario {
@@ -125,10 +127,16 @@ public class Gerente extends Usuario {
              }
         }
 	           
-
-	
-	
-	
+	    public void verClasificacionEquipo(LinkedList<Equipo> equipos, String id_equipo) {
+	        for (Equipo equipo : equipos) {
+	            if (equipo.getId_equipo().equals(id_equipo)) {
+	                String clasificacion = equipo.getClasificacion();
+	                System.out.println("La clasificación del equipo " + equipo.getNombre() + " es: " + clasificacion);
+	                return;
+	            }
+	        }
+	        System.out.println("No se encontró un equipo con el id " + id_equipo);
+	    }
 	
 	
 

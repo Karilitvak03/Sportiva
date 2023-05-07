@@ -38,7 +38,7 @@ public class Equipo {
 
 	    @Override
 		public String toString() {
-			return "\n\nid_equipo: " + id_equipo + "\nnombre: " + nombre + "\nclasificacion: " + clasificacion;
+			return "\nInformacion del Equipo: \nid_equipo: " + id_equipo + "\nnombre: " + nombre + "\nclasificacion: " + clasificacion;
 		}
 
 		public void removeSponsor(Sponsor sponsor) {

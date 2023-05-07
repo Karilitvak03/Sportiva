@@ -33,7 +33,9 @@ public class Main {
 		
 
 		// Testeo de listas
-		
+		LinkedList<Equipo> equipos = new LinkedList<Equipo>();
+	        
+	        
 		Deposito dep = new Deposito("1", new ArrayList<Producto>());
 		
 		Sucursal s1 = new Sucursal("1",d1,dep,e1,g1,new LinkedList<Vendedor>());
@@ -46,8 +48,15 @@ public class Main {
 		dep.getListaProductos().add( new Producto("3","pantalon","Jordan",37.99,14));
 		dep.getListaProductos().add( new Producto("4","gorra","Jordan",38.99,10));
 		
+		Equipo eq1 = new Equipo("1", "Boca Junior", "Primera Division");
+	        equipos.add(eq1);
+	        Equipo eq2 = new Equipo("2", "Nueva Chicago", "Primera B Nacional");
+	        equipos.add(eq2);
+	        Equipo eq3 = new Equipo("3", "Sacachispas", "Primera B Metropolitana");
+	        equipos.add(eq3);
 		String info="";
 		String infoS="";
+		String infoSS="";
 		for (Producto listaproductos : dep.getListaProductos()) {
 			info = info + listaproductos + "\n";
 		}
@@ -61,7 +70,12 @@ public class Main {
 		
 		JOptionPane.showMessageDialog(null, infoS);
 		
+			
+		 for (Equipo equipo : equipos) {
+		      infoSS = infoSS + equipo + "\n";      
+		}
 		
+		JOptionPane.showMessageDialog(null, infoSS);
 		
 		//JOptionPane.showMessageDialog(null, dep.toString());
 		System.out.println(s1.toString());
@@ -203,7 +217,15 @@ public class Main {
 		        // Eliminar un sponsor
 		        g1.eliminarSponsor(sponsor);
 		        g1.eliminarSponsor(sponsor2);
+		   
+		     // Obtener clasificación de un equipo
+		        String id_equipo = "1";
+		        g1.verClasificacionEquipo(equipos, id_equipo);
 		    }
+		        
+		        
+
+	
 		
 
 		
