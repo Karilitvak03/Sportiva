@@ -29,12 +29,37 @@ public class Encargado extends Usuario {
 		
 	}
 	
+	public void editarProducto() {
+		int opcion;
+		String modificacion;
+		
+		opcion= Integer.parseInt(JOptionPane.showInputDialog("Que desea modificar? \n1-Id del Producto \n2-Tipo del Producto \n3-Nombre del Producto \n4-Precio del prodcuto \n5-Cantidad del producto"));
+		switch (opcion) {
+		case 1:
+			modificacion = JOptionPane.showInputDialog("Ingrese nuevo ID del producto");
+			break;
+
+		case 2:
+			modificacion = JOptionPane.showInputDialog("Ingrese nuevo Tipo del producto");
+			break;
+			
+		case 3:
+			modificacion = JOptionPane.showInputDialog("Ingrese nuevo Nombre del Porducto");
+			break;
+		
+		case 4:
+			modificacion = JOptionPane.showInputDialog("Ingrese nuevo Precio del Producto");
+			break;
+		case 5:
+			modificacion = JOptionPane.showInputDialog("Ingrese nueva Cantidad del Producto");
+		}
+		
+	}
 	
 	
 	
-	
-	
-	
+
+
 	public String getId_encargado() {
 		return id_encargado;
 	}

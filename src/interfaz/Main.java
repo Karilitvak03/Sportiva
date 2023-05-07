@@ -79,12 +79,13 @@ public class Main {
 		
 		//JOptionPane.showMessageDialog(null, dep.toString());
 		System.out.println(s1.toString());
-		
-
+		System.out.println(dep.toString());
+		System.out.println(eq1.toString());
+		System.out.println(eq2.toString());
+		System.out.println(eq3.toString());
 		// Testeo de funcionalidades de usuarios
 		
-	/*	
-		
+	
 
 
 		do {
@@ -148,7 +149,7 @@ public class Main {
 					}
 					
 				 	*/ 
-		/*
+		
 					g1.editarUsuario();
 					
 					
@@ -193,16 +194,17 @@ public class Main {
 		} while (seleccion != 4);
 		
 
-		
+	
+		//Producto//
+			
 		e1.agregarProducto();
 		
 
-		
-		
-*/
-		
-		
 
+		
+		e1.editarProducto();
+
+		
 		        // Agregar un sponsor
 		        Equipo equipo = new Equipo("1", "Boca Junior", "Primera Division");
 		        Sponsor sponsor = new Sponsor("1", equipo, true);
@@ -218,9 +220,7 @@ public class Main {
 		        g1.eliminarSponsor(sponsor);
 		        g1.eliminarSponsor(sponsor2);
 		   
-		     // Obtener clasificación de un equipo
-		        String id_equipo = "1";
-		        g1.verClasificacionEquipo(equipos, id_equipo);
+		   
 		    }
 		        
 		        
