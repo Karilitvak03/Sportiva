@@ -17,6 +17,8 @@ public class Main {
 
 	public static void main(String[] args) {
 				//id, abirta, recaudo
+		//Sucursal sucursal = new sucursal();
+		
 		Caja caja1 = new Caja(1, true, 0.0);
 		Caja caja2 = new Caja(2, true, 0.0);
 		Caja caja3 = new Caja(3, true, 0.0);
@@ -48,6 +50,7 @@ public class Main {
 		Producto p5 = new Producto(5,"pantalon","short futbol",6000.0, 80);
 		Producto p6 = new Producto(6,"gorro","bisera",3500.0, 190);
 		LinkedList <Producto> productos = new LinkedList(); 
+		
 		productos.add(p1);productos.add(p2);productos.add(p3);
 		productos.add(p4);productos.add(p5);productos.add(p6);
 		
@@ -70,17 +73,18 @@ public class Main {
 			if (usuario.login(dni, contraseña)) {
 				JOptionPane.showMessageDialog(null, "Sesion iniciada correctamente!"
 						+ "\n Bienvenido "+usuario.getNombre()+" "+usuario.getApellido() );
-				
+			
 				if (usuario.getRol().equalsIgnoreCase("gerente")) {
 					String opcion =JOptionPane.showInputDialog("MENU GERENTE:\n\nIngrese opcion a operar.\n"
 							+ "1 - Visualizar Usuarios\n"
 							+ "2 - Cargar nuevo Usuario\n"
 							+ "3 - Editar Usuario\n"
 							+ "4 - Eliminar Usuario\n"
-							+ "5 - Salir\n");
+							+ "5 - "
+							+ "6 - Salir\n");
 					switch (opcion) {
 					case "1":
-						g1.crearUsuario(usuarios); 
+						g1.VerUsuarios(usuarios); 
 						menuPrincipal(usuarios, productos, ventas, g1, v1, e1, caja1);
 						break;
 					case "2":
@@ -92,7 +96,7 @@ public class Main {
 						menuPrincipal(usuarios, productos, ventas, g1, v1, e1, caja1);
 						break;
 					case "4":
-						g1.editarUsuario(usuarios);
+						g1.eliminarUsuario(usuarios);
 						menuPrincipal(usuarios, productos, ventas, g1, v1, e1, caja1);
 						break;
 					case "5":

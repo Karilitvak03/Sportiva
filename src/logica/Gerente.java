@@ -6,7 +6,8 @@ import javax.swing.JOptionPane;
 
 public class Gerente extends Usuario{
 
-	int id_gerente;
+	private int id_gerente;
+	private Sucursal sucursal;
 
 	public Gerente(String nombre, String apellido, String dni, String email, String contraseña, boolean login,
 			String rol, int id_gerente) {
@@ -159,6 +160,8 @@ public class Gerente extends Usuario{
 				usuarios.remove(usuarios.indexOf(usuario));
 			}
 		}
+		
+		
 		
 	}
 }
